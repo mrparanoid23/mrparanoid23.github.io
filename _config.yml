@@ -9,7 +9,7 @@ timezone: Asia/Kolkata
 
 title: Rishav G C
 
-tagline: Data Analyst · SEO Specialist · Digital Marketing · Founder @Compile & Commit
+tagline: Data Analyst · SEO Specialist · Digital Marketing · Founder @Compilhe & Commit
 
 description: >-
   Personal blog of Rishav G C — Data Analyst, SEO Specialist, Digital Marketing Specialist,
@@ -44,7 +44,7 @@ theme_mode: dark
 
 cdn:
 
-avatar: assets/img/avatar.jpg
+avatar:
 
 social_preview_image:
 

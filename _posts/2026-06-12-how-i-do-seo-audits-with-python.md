@@ -1,96 +1,57 @@
 ---
-title: "How I Do SEO Audits with Python (My Actual Workflow)"
-date: 2026-06-12 10:00:00 +0530
-categories: [SEO, Python]
-tags: [seo, python, technical-seo, automation, audit]
+title: "Why I Started Compile & Commit"
+date: 2026-06-08 10:00:00 +0530
+categories: [Startup, Personal]
+tags: [startup, entrepreneurship, compile-and-commit, data, marketing]
 ---
 
-Most SEO audits are done manually — crawl a site, export a CSV, open it in Excel, and spend hours filtering through thousands of rows. That works, but it doesn't scale.
+Starting a company is one of those things that sounds a lot cleaner in retrospect than it felt in the moment.
 
-Here's how I use Python to automate the heavy lifting in my SEO audits at [Compile & Commit](https://compileandcommit.com).
+Here's the honest version of why I started [Compile & Commit Pvt Ltd](https://compileandcommit.com).
 
-## Why Python for SEO?
+## The Problem I Kept Seeing
 
-Tools like Ahrefs and Semrush are excellent, but they have limits:
-- API rate limits
-- Can't combine data from multiple sources easily
-- You're stuck in their UI for analysis
+I was working with businesses — analysing their data, running their SEO, managing their marketing — and I kept noticing the same gap everywhere.
 
-Python removes those walls. You pull data exactly how you need it, combine sources, and build reusable audit scripts you can run on any site in minutes.
+They had marketing people who didn't understand data. And they had data people who didn't understand marketing.
 
-## My Audit Workflow
+The result? Marketing decisions made on gut feeling, and dashboards nobody actually used to make decisions.
 
-### Step 1 — Crawl the Site with Screaming Frog (or requests + BeautifulSoup)
+I knew how to sit in both worlds. Data analyst by training, digital marketer by obsession. So I started asking: what if someone actually connected these two things properly?
 
-For smaller sites, I crawl directly with Python:
+## What Compile & Commit Actually Does
 
-```python
-import requests
-from bs4 import BeautifulSoup
-import pandas as pd
+We're not a typical agency. We don't just run ads or do SEO and report vanity metrics.
 
-def crawl_page(url):
-    response = requests.get(url, timeout=10)
-    soup = BeautifulSoup(response.text, 'html.parser')
-    
-    return {
-        'url': url,
-        'title': soup.find('title').text if soup.find('title') else '',
-        'meta_description': soup.find('meta', {'name': 'description'})['content'] if soup.find('meta', {'name': 'description'}) else '',
-        'h1': soup.find('h1').text if soup.find('h1') else '',
-        'status_code': response.status_code,
-        'word_count': len(soup.get_text().split())
-    }
-```
+We help businesses build the **full system**:
+- The data infrastructure to actually measure what's working
+- The SEO and content strategy to drive the right traffic
+- The marketing campaigns built on real audience data — not assumptions
+- The reporting that shows what's actually happening, not what looks good
 
-### Step 2 — Pull Data from Google Search Console API
+Everything is connected. Marketing feeds data. Data improves marketing. The loop compounds.
 
-```python
-from google.oauth2.credentials import Credentials
-from googleapiclient.discovery import build
+## The Name
 
-# Connect to GSC
-service = build('searchconsole', 'v1', credentials=creds)
+"Compile & Commit" comes from programming. You write code → compile it (check it works) → commit it (make it permanent, push it live).
 
-# Pull top pages by clicks
-response = service.searchanalytics().query(
-    siteUrl='https://yoursite.com',
-    body={
-        'startDate': '2026-01-01',
-        'endDate': '2026-06-01',
-        'dimensions': ['page'],
-        'rowLimit': 500
-    }
-).execute()
-```
+That's how I think about business decisions too. Don't just have ideas — test them, validate them, and commit when the data confirms they work.
 
-### Step 3 — Identify Quick Win Opportunities
+## What I've Learned So Far
 
-Pages ranking on positions 4–20 are my priority — they're close to page 1 with a small push:
+**Clients don't want reports. They want answers.**
+Nobody hires you to produce a PDF. They hire you because they have a question: *"Why aren't we getting more leads?"* or *"Where should we spend our marketing budget?"* The deliverable is the answer, not the report.
 
-```python
-df = pd.DataFrame(rows)
-quick_wins = df[(df['position'] >= 4) & (df['position'] <= 20)]
-quick_wins = quick_wins.sort_values('impressions', ascending=False)
-print(quick_wins[['page', 'query', 'position', 'clicks', 'impressions']].head(20))
-```
+**Data without context is just numbers.**
+The hardest skill isn't pulling data — it's knowing which question to ask first.
 
-### Step 4 — Output a Prioritised Action Report
+**SEO is a long game. Most people quit too early.**
+The sites that win in search are the ones that kept going when nothing seemed to be working. Consistency beats tactics.
 
-I export everything into a structured Excel report with colour-coded priority levels — critical issues (red), medium (yellow), and optimisation opportunities (green).
+## What's Next
 
-## What This Saves Me
+I'm building this out — growing the team, productising some of our frameworks, and writing more about what we're learning along the way. This blog is part of that.
 
-Running this on a 500-page site used to take a full day manually. Now it takes about 30 minutes — mostly just reviewing the output.
+If you're a founder or marketer who wants to get serious about data-driven growth, [let's talk](mailto:rishavgc07@gmail.com).
 
-## Tools I Use Alongside Python
-
-- **Ahrefs** — backlink data and keyword research
-- **Google Search Console API** — real performance data
-- **Screaming Frog** — for large site crawls (their Python API is handy)
-- **Pandas + openpyxl** — data manipulation and report generation
-
----
-
-If you want the full script, drop me a message on [LinkedIn](https://www.linkedin.com/in/rishavgc/) — I'm happy to share it.
-
+The gap between knowing your data and acting on it is where most businesses lose. That's exactly where we work.

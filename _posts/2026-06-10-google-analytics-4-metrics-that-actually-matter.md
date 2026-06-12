@@ -78,4 +78,3 @@ GA4 gives you data. Your job is to turn that data into a question: *"Why is this
 If a metric doesn't point you toward an action, it's decoration.
 
 What metrics are you tracking? [Let me know on LinkedIn.](https://www.linkedin.com/in/rishavgc/)
-

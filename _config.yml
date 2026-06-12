@@ -21,9 +21,6 @@ url: "https://mrparanoid23.github.io"
 github:
   username: mrparanoid23
 
-twitter:
-  username: ""
-
 social:
   name: Rishav G C
   email: rishavgc07@gmail.com
@@ -45,25 +42,25 @@ toc: true
 # ============================================================
 analytics:
   google:
-    id: ""  # Add your Google Analytics G-XXXXXXX ID here later
+    id: # leave blank until you set up Google Analytics
 
 # ============================================================
 # Page Views
 # ============================================================
 pageviews:
-  provider: ""
+  provider: # leave blank
 
 # ============================================================
 # Comments
 # ============================================================
 comments:
-  provider: ""
+  provider: # leave blank - no comments system
 
 # ============================================================
 # SEO & Assets
 # ============================================================
-img_cdn: ""
-cdn: ""
+img_cdn:
+cdn:
 
 # ============================================================
 # Sidebar Extra Links

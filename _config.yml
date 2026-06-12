@@ -1,20 +1,19 @@
 # The Site Configuration
-# ============================================================
+
 # Import the theme
 theme: jekyll-theme-chirpy
 
-# ============================================================
-# Site Settings
-# ============================================================
 lang: en
+
 timezone: Asia/Kolkata
 
 title: Rishav G C
-tagline: Data Analyst · Marketing Specialist · SEO Specialist · Founder @Compile & Commit
+
+tagline: Data Analyst · SEO Specialist · Digital Marketing · Founder @Compile & Commit
 
 description: >-
-  Personal website of Rishav G C — Data Analyst, SEO Specialist, Digital Marketing Specialist,
-  and Founder of Compile & Commit. Sharing insights on data, marketing, and growth.
+  Personal blog of Rishav G C — Data Analyst, SEO Specialist, Digital Marketing Specialist,
+  and Founder of Compile & Commit. Writing about data, marketing, and growth.
 
 url: "https://mrparanoid23.github.io"
 
@@ -28,59 +27,68 @@ social:
     - https://www.linkedin.com/in/rishavgc/
     - https://github.com/mrparanoid23
 
-# ============================================================
-# Site Appearance
-# ============================================================
-theme_mode: dark   # Options: light | dark
+webmaster_verifications:
+  google:
+  bing:
+
+analytics:
+  google:
+    id:
+  goatcounter:
+    id:
+
+pageviews:
+  provider:
+
+theme_mode: dark
+
+cdn:
 
 avatar: assets/img/avatar.jpg
 
+social_preview_image:
+
 toc: true
 
-# ============================================================
-# Analytics
-# ============================================================
-analytics:
-  google:
-    id: # leave blank until you set up Google Analytics
-
-# ============================================================
-# Page Views
-# ============================================================
-pageviews:
-  provider: # leave blank
-
-# ============================================================
-# Comments
-# ============================================================
 comments:
-  provider: # leave blank - no comments system
+  provider:
+  disqus:
+    shortname:
+  utterances:
+    repo:
+    issue_term:
+  giscus:
+    repo:
+    repo_id:
+    category:
+    category_id:
 
-# ============================================================
-# SEO & Assets
-# ============================================================
-img_cdn:
-cdn:
+assets:
+  self_host:
+    enabled:
+    env:
 
-# ============================================================
-# Sidebar Extra Links
-# ============================================================
-links:
-  - title: LinkedIn
-    url: https://www.linkedin.com/in/rishavgc/
-  - title: GitHub
-    url: https://github.com/mrparanoid23
-  - title: Compile & Commit
-    url: https://compileandcommit.com
+pwa:
+  enabled: true
+  cache:
+    enabled: true
+    deny_paths:
 
-# ============================================================
-# Pagination
-# ============================================================
 paginate: 10
 
-# ============================================================
-# Collections
-# ============================================================
+baseurl: ""
+
+kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;"
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
 collections:
   tabs:
     output: true
@@ -96,15 +104,16 @@ defaults:
       toc: true
       permalink: /posts/:title/
   - scope:
-      path: "_tabs"
+      path: _drafts
+    values:
+      comments: false
+  - scope:
+      path: ""
       type: tabs
     values:
-      layout: tab
+      layout: page
       permalink: /:title/
 
-# ============================================================
-# Build Settings
-# ============================================================
 sass:
   style: compressed
 
@@ -124,8 +133,9 @@ exclude:
   - tools
   - README.md
   - LICENSE
+  - purgecss.js
   - "*.config.js"
-  - package*.json
+  - "package*.json"
 
 jekyll-archives:
   enabled: [categories, tags]

@@ -139,7 +139,7 @@ order: 1
     <span id="rg-typed"></span><span class="rg-cursor"></span>
   </div>
   <div class="rg-badges">
-    <span class="rg-badge">📍 India</span>
+    <span class="rg-badge">📍 Nepal</span>
     <span class="rg-badge green">🟢 Open to Opportunities</span>
   </div>
   <div class="rg-socials">

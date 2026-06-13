@@ -156,11 +156,11 @@ order: 1
     <span class="rg-stat-label">Years Experience</span>
   </div>
   <div class="rg-stat">
-    <span class="rg-stat-num" data-val="50" data-suffix="+">0+</span>
+    <span class="rg-stat-num" data-val="5" data-suffix="+">0+</span>
     <span class="rg-stat-label">Projects Delivered</span>
   </div>
   <div class="rg-stat">
-    <span class="rg-stat-num" data-val="100" data-suffix="K+">0K+</span>
+    <span class="rg-stat-num" data-val="10" data-suffix="K+">0K+</span>
     <span class="rg-stat-label">Organic Sessions</span>
   </div>
   <div class="rg-stat">
@@ -176,12 +176,12 @@ order: 1
     <div class="rg-do-card">
       <div class="rg-do-icon">📊</div>
       <div class="rg-do-title">Data Analytics</div>
-      <div class="rg-do-desc">Turn raw data into dashboards, reports, and decisions using Python, SQL, Power BI, and GA4.</div>
+      <div class="rg-do-desc">Turn raw data into dashboards, reports, and decisions using Python, SQL, Power BI, Google Search Console(GSC), Google Business Profile(GBP)and GA4.</div>
     </div>
     <div class="rg-do-card">
       <div class="rg-do-icon">🔍</div>
       <div class="rg-do-title">SEO Strategy</div>
-      <div class="rg-do-desc">Drive organic traffic with technical SEO audits, keyword research, and content strategy at scale.</div>
+      <div class="rg-do-desc">Drive organic traffic with technical SEO audits, keyword research, Core Web Vitals, and content strategy at scale.</div>
     </div>
     <div class="rg-do-card">
       <div class="rg-do-icon">📣</div>
@@ -207,7 +207,7 @@ order: 1
           <div class="rg-job-title">Founder & CEO</div>
           <div class="rg-job-company">Compile & Commit Pvt Ltd</div>
         </div>
-        <span class="rg-job-period">2021 · Present</span>
+        <span class="rg-job-period">2025 · Present</span>
       </div>
       <div class="rg-expand-hint">▾ tap to expand</div>
       <div class="rg-job-body">
@@ -347,7 +347,7 @@ order: 1
       <div class="rg-project-top">
         <span class="rg-project-status">🟢 Live</span>
         <div class="rg-project-name">Compile & Commit</div>
-        <div class="rg-project-desc">Full-service data analytics and digital marketing agency helping startups and businesses scale through data, SEO, and marketing strategy.</div>
+        <div class="rg-project-desc">Full-service Data Analytics, AI Automation,  and digital marketing agency helping startups and businesses scale through data, SEO, and marketing strategy.</div>
       </div>
       <div class="rg-project-bottom">
         <div class="rg-project-tags">
@@ -380,9 +380,9 @@ order: 1
   <div class="rg-edu-card">
     <div class="rg-edu-icon">🎓</div>
     <div>
-      <div class="rg-edu-deg">[Your Degree]</div>
-      <div class="rg-edu-uni">[Your University]</div>
-      <div class="rg-edu-year">[Year]</div>
+      <div class="rg-edu-deg">Bachelor oF Business Administration</div>
+      <div class="rg-edu-uni">Pokhara University</div>
+      <div class="rg-edu-year">2018-2023</div>
     </div>
   </div>
 </div>
@@ -412,6 +412,11 @@ order: 1
       <div class="rg-focus-title">SEO at Scale</div>
       <div class="rg-focus-desc">Building SEO frameworks and automation tools that make organic growth predictable and measurable.</div>
     </div>
+    <div class="rg-focus-card">
+      <span class="rg-focus-icon">🚀</span>
+      <div class="rg-focus-title">GEO (Generative Engine Optimization)</div>
+      <div class="rg-focus-desc">Ranking on the GEO for better outcome and user interaction.</div>
+      </div>
     <div class="rg-focus-card">
       <span class="rg-focus-icon">🚀</span>
       <div class="rg-focus-title">Growing Compile & Commit</div>

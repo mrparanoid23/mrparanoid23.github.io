@@ -4,7 +4,9 @@ title: About
 icon: fas fa-info-circle
 order: 1
 ---
-![About Banner](/assets/img/about-banner.jpg){: width="100%" style="border-radius: 12px; margin-bottom: 2rem;" }
+
+<img src="/assets/img/about-banner.jpg" alt="About Banner" style="width:100%; border-radius:12px; margin-bottom:2rem; display:block;" />
+
 # About
 
 Data · Marketing · SEO · Startups

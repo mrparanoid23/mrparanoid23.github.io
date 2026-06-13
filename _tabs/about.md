@@ -6,7 +6,6 @@ order: 1
 ---
 
 <style>
-/* ── Hero ── */
 .rg-banner{width:100%;border-radius:12px;margin-bottom:2rem;display:block;object-fit:cover;max-height:320px;}
 .rg-hero{text-align:center;padding:1rem 0 2rem;}
 .rg-name{font-size:2.4rem;font-weight:700;background:linear-gradient(135deg,#667eea,#764ba2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin:0.5rem 0;}
@@ -19,30 +18,23 @@ order: 1
 .rg-socials{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;}
 .rg-social-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border-radius:8px;font-size:.88rem;font-weight:500;text-decoration:none;border:1px solid rgba(102,126,234,.35);color:var(--link-color,#667eea);background:rgba(102,126,234,.06);transition:all .2s;}
 .rg-social-btn:hover{background:rgba(102,126,234,.15);transform:translateY(-2px);text-decoration:none;}
-
-/* ── Stats ── */
 .rg-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:14px;margin:2rem 0;}
 .rg-stat{text-align:center;padding:1.2rem 1rem;border-radius:12px;border:1px solid var(--border-color,rgba(0,0,0,.1));background:var(--card-bg,rgba(255,255,255,.05));transition:transform .2s;}
 .rg-stat:hover{transform:translateY(-3px);}
 .rg-stat-num{display:block;font-size:2rem;font-weight:700;background:linear-gradient(135deg,#667eea,#764ba2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.2;}
 .rg-stat-label{display:block;font-size:.78rem;color:var(--text-muted-color,#888);margin-top:4px;}
-
-/* ── Sections ── */
 .rg-section{margin:2.5rem 0;}
 .rg-section-title{font-size:1.35rem;font-weight:700;margin-bottom:1.2rem;display:flex;align-items:center;gap:8px;}
 .rg-section-title::after{content:'';flex:1;height:1px;background:linear-gradient(to right,rgba(102,126,234,.4),transparent);margin-left:12px;}
 .rg-reveal{opacity:0;transform:translateY(24px);transition:opacity .55s ease,transform .55s ease;}
 .rg-reveal.visible{opacity:1;transform:translateY(0);}
-
-/* ── What I Do cards ── */
+.rg-summary{font-size:.95rem;line-height:1.75;color:var(--text-muted-color,#888);padding:1.2rem;border-left:3px solid #667eea;background:rgba(102,126,234,.05);border-radius:0 10px 10px 0;margin-bottom:1.2rem;}
 .rg-do-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;}
 .rg-do-card{padding:1.1rem;border-radius:12px;border:1px solid var(--border-color,rgba(0,0,0,.1));background:var(--card-bg,rgba(255,255,255,.03));transition:transform .2s,border-color .2s;}
 .rg-do-card:hover{transform:translateY(-3px);border-color:rgba(102,126,234,.5);}
 .rg-do-icon{font-size:1.6rem;margin-bottom:8px;}
 .rg-do-title{font-weight:600;font-size:.95rem;margin-bottom:4px;}
 .rg-do-desc{font-size:.82rem;color:var(--text-muted-color,#888);line-height:1.5;}
-
-/* ── Experience Timeline ── */
 .rg-timeline{position:relative;padding-left:20px;}
 .rg-timeline::before{content:'';position:absolute;left:6px;top:8px;bottom:8px;width:2px;background:linear-gradient(to bottom,#667eea,#764ba2);}
 .rg-job{position:relative;margin-bottom:2rem;cursor:pointer;}
@@ -52,16 +44,16 @@ order: 1
 .rg-job-title{font-weight:700;font-size:1rem;}
 .rg-job-company{font-size:.88rem;color:#667eea;font-weight:500;}
 .rg-job-period{font-size:.78rem;color:var(--text-muted-color,#888);padding:2px 10px;border-radius:12px;border:1px solid var(--border-color,rgba(0,0,0,.1));white-space:nowrap;}
-.rg-job-body{overflow:hidden;max-height:0;transition:max-height .4s ease,opacity .3s;}
-.rg-job-body.open{max-height:400px;opacity:1;}
-.rg-job-body{opacity:0;}
+.rg-job-body{overflow:hidden;max-height:0;transition:max-height .4s ease;opacity:0;}
+.rg-job-body.open{max-height:500px;opacity:1;}
 .rg-job-body ul{margin-top:10px;padding-left:18px;font-size:.88rem;color:var(--text-muted-color,#888);}
-.rg-job-body li{margin-bottom:4px;line-height:1.55;}
+.rg-job-body li{margin-bottom:5px;line-height:1.55;}
+.rg-job-achieve{margin-top:10px;padding:8px 12px;background:rgba(16,185,129,.07);border-radius:8px;border-left:3px solid #10b981;}
+.rg-job-achieve-title{font-size:.78rem;font-weight:700;color:#10b981;margin-bottom:4px;}
+.rg-job-achieve li{color:var(--text-muted-color,#888)!important;}
 .rg-job-tools{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px;}
 .rg-tool-tag{font-size:.75rem;padding:3px 10px;border-radius:6px;background:rgba(102,126,234,.12);color:#667eea;border:1px solid rgba(102,126,234,.25);}
 .rg-expand-hint{font-size:.75rem;color:var(--text-muted-color,#999);margin-top:4px;}
-
-/* ── Skills ── */
 .rg-skill-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:1.2rem;}
 .rg-tab-btn{padding:6px 16px;border-radius:20px;border:1px solid var(--border-color,rgba(0,0,0,.1));background:transparent;cursor:pointer;font-size:.83rem;font-weight:500;color:var(--text-muted-color,#888);transition:all .2s;}
 .rg-tab-btn.active{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-color:transparent;}
@@ -77,10 +69,7 @@ order: 1
 .rg-tag:hover{transform:scale(1.05);}
 .rg-tag.data{background:rgba(99,179,237,.12);border-color:rgba(99,179,237,.3);color:#4299e1;}
 .rg-tag.seo{background:rgba(72,187,120,.12);border-color:rgba(72,187,120,.3);color:#38a169;}
-.rg-tag.paid{background:rgba(237,137,54,.12);border-color:rgba(237,137,54,.3);color:#dd6b20;}
-.rg-tag.dev{background:rgba(159,122,234,.12);border-color:rgba(159,122,234,.3);color:#805ad5;}
-
-/* ── Projects ── */
+.rg-tag.soft{background:rgba(237,137,54,.12);border-color:rgba(237,137,54,.3);color:#dd6b20;}
 .rg-projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;}
 .rg-project-card{border-radius:14px;border:1px solid var(--border-color,rgba(0,0,0,.1));overflow:hidden;transition:transform .25s,box-shadow .25s;}
 .rg-project-card:hover{transform:translateY(-5px);box-shadow:0 12px 32px rgba(102,126,234,.15);}
@@ -93,32 +82,25 @@ order: 1
 .rg-ptag{font-size:.72rem;padding:2px 9px;border-radius:5px;background:rgba(102,126,234,.1);color:#667eea;}
 .rg-project-link{font-size:.82rem;color:#667eea;text-decoration:none;font-weight:500;}
 .rg-project-link:hover{text-decoration:underline;}
-
-/* ── Education ── */
 .rg-edu-card{display:flex;gap:14px;padding:1.1rem;border-radius:12px;border:1px solid var(--border-color,rgba(0,0,0,.1));margin-bottom:12px;transition:border-color .2s;}
 .rg-edu-card:hover{border-color:rgba(102,126,234,.4);}
 .rg-edu-icon{font-size:1.8rem;flex-shrink:0;}
 .rg-edu-deg{font-weight:700;font-size:.95rem;}
 .rg-edu-uni{font-size:.85rem;color:#667eea;}
 .rg-edu-year{font-size:.78rem;color:var(--text-muted-color,#888);margin-top:2px;}
-
-/* ── Certifications ── */
-.rg-certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;}
-.rg-cert{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:10px;border:1px solid var(--border-color,rgba(0,0,0,.1));transition:border-color .2s,transform .2s;}
+.rg-edu-note{font-size:.78rem;color:#10b981;margin-top:3px;font-weight:500;}
+.rg-certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;}
+.rg-cert{display:flex;align-items:flex-start;gap:10px;padding:10px 14px;border-radius:10px;border:1px solid var(--border-color,rgba(0,0,0,.1));transition:border-color .2s,transform .2s;}
 .rg-cert:hover{border-color:rgba(102,126,234,.4);transform:translateX(3px);}
-.rg-cert-icon{font-size:1.2rem;}
+.rg-cert-icon{font-size:1.2rem;flex-shrink:0;margin-top:1px;}
 .rg-cert-name{font-size:.83rem;font-weight:600;}
 .rg-cert-org{font-size:.75rem;color:var(--text-muted-color,#888);}
-
-/* ── Current Focus ── */
 .rg-focus-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;}
 .rg-focus-card{padding:1.2rem;border-radius:14px;border:1px solid var(--border-color,rgba(0,0,0,.1));text-align:center;transition:transform .2s,border-color .2s;}
 .rg-focus-card:hover{transform:translateY(-4px);border-color:rgba(102,126,234,.4);}
 .rg-focus-icon{font-size:2rem;margin-bottom:10px;display:block;}
 .rg-focus-title{font-weight:700;font-size:.95rem;margin-bottom:6px;}
 .rg-focus-desc{font-size:.82rem;color:var(--text-muted-color,#888);line-height:1.55;}
-
-/* ── Connect ── */
 .rg-connect{text-align:center;padding:2.5rem 1rem;border-radius:16px;background:linear-gradient(135deg,rgba(102,126,234,.08),rgba(118,75,162,.06));border:1px solid rgba(102,126,234,.2);margin-top:2.5rem;}
 .rg-connect h2{font-size:1.5rem;font-weight:700;margin-bottom:.6rem;}
 .rg-connect p{color:var(--text-muted-color,#888);margin-bottom:1.4rem;font-size:.93rem;}
@@ -130,8 +112,8 @@ order: 1
 .rg-connect-btn.secondary:hover{background:rgba(102,126,234,.1);text-decoration:none;}
 </style>
 
-<!-- ═══════════════ HERO ═══════════════ -->
-<img src="/assets/img/about-banner.jpg" alt="Rishav G C — Data, SEO & Digital Marketing" class="rg-banner" />
+<!-- HERO -->
+<img src="/assets/img/about-banner.jpg" alt="Rishav G C — Digital Marketing & Data Analytics" class="rg-banner" />
 
 <div class="rg-hero">
   <h1 class="rg-name">Rishav G C</h1>
@@ -139,7 +121,7 @@ order: 1
     <span id="rg-typed"></span><span class="rg-cursor"></span>
   </div>
   <div class="rg-badges">
-    <span class="rg-badge">📍 Nepal</span>
+    <span class="rg-badge">📍 Kathmandu, Nepal</span>
     <span class="rg-badge green">🟢 Open to Opportunities</span>
   </div>
   <div class="rg-socials">
@@ -149,54 +131,57 @@ order: 1
   </div>
 </div>
 
-<!-- ═══════════════ STATS ═══════════════ -->
+<!-- STATS -->
 <div class="rg-stats rg-reveal">
-  <div class="rg-stat" data-target="4" data-suffix="+">
-    <span class="rg-stat-num" data-val="4" data-suffix="+">0+</span>
+  <div class="rg-stat">
+    <span class="rg-stat-num" data-val="3" data-suffix="+">0+</span>
     <span class="rg-stat-label">Years Experience</span>
   </div>
   <div class="rg-stat">
-    <span class="rg-stat-num" data-val="5" data-suffix="+">0+</span>
-    <span class="rg-stat-label">Projects Delivered</span>
+    <span class="rg-stat-num" data-val="35" data-suffix="%">0%</span>
+    <span class="rg-stat-label">Traffic Growth Delivered</span>
   </div>
   <div class="rg-stat">
-    <span class="rg-stat-num" data-val="10" data-suffix="K+">0K+</span>
-    <span class="rg-stat-label">Organic Sessions</span>
+    <span class="rg-stat-num" data-val="4" data-suffix="">0</span>
+    <span class="rg-stat-label">Companies</span>
   </div>
   <div class="rg-stat">
-    <span class="rg-stat-num" data-val="3" data-suffix="x">0x</span>
-    <span class="rg-stat-label">Avg SEO Growth</span>
+    <span class="rg-stat-num" data-val="5" data-suffix="">0</span>
+    <span class="rg-stat-label">Certifications</span>
   </div>
 </div>
 
-<!-- ═══════════════ WHAT I DO ═══════════════ -->
+<!-- WHAT I DO -->
 <div class="rg-section rg-reveal">
   <div class="rg-section-title">🎯 What I Do</div>
+  <div class="rg-summary">
+    Dynamic and performance-driven Marketing Specialist with proven expertise in digital marketing, brand strategy, and data analytics. Skilled at driving measurable business growth through data-backed decisions, creative campaign execution, and cross-department collaboration. Experienced in SEO, Google Analytics, Google Business Profile optimization, social media management, and e-commerce operations.
+  </div>
   <div class="rg-do-grid">
     <div class="rg-do-card">
       <div class="rg-do-icon">📊</div>
       <div class="rg-do-title">Data Analytics</div>
-      <div class="rg-do-desc">Turn raw data into dashboards, reports, and decisions using Python, SQL, Power BI, Google Search Console(GSC), Google Business Profile(GBP)and GA4.</div>
+      <div class="rg-do-desc">Turn raw data into insights using Google Analytics, Excel, and Power BI — from campaign reporting to business intelligence.</div>
     </div>
     <div class="rg-do-card">
       <div class="rg-do-icon">🔍</div>
       <div class="rg-do-title">SEO Strategy</div>
-      <div class="rg-do-desc">Drive organic traffic with technical SEO audits, keyword research, Core Web Vitals, and content strategy at scale.</div>
+      <div class="rg-do-desc">Drive organic growth with technical SEO audits, keyword research, and content strategy — backed by Semrush and GSC.</div>
     </div>
     <div class="rg-do-card">
       <div class="rg-do-icon">📣</div>
       <div class="rg-do-title">Digital Marketing</div>
-      <div class="rg-do-desc">Run paid and organic campaigns across Google, Meta, and LinkedIn — connected to real business outcomes.</div>
+      <div class="rg-do-desc">End-to-end campaigns across Google, Meta, LinkedIn, and TikTok — connecting brand visibility to measurable business outcomes.</div>
     </div>
     <div class="rg-do-card">
       <div class="rg-do-icon">🚀</div>
       <div class="rg-do-title">Startup Growth</div>
-      <div class="rg-do-desc">Founder of Compile & Commit — building data-driven growth systems for businesses that want to scale.</div>
+      <div class="rg-do-desc">Founder of Compile & Commit — building AI automation, web development, and digital marketing solutions for businesses.</div>
     </div>
   </div>
 </div>
 
-<!-- ═══════════════ EXPERIENCE ═══════════════ -->
+<!-- EXPERIENCE -->
 <div class="rg-section rg-reveal">
   <div class="rg-section-title">💼 Experience</div>
   <div class="rg-timeline">
@@ -204,24 +189,25 @@ order: 1
     <div class="rg-job" onclick="rgToggle(this)">
       <div class="rg-job-header">
         <div>
-          <div class="rg-job-title">Founder & CEO</div>
-          <div class="rg-job-company">Compile & Commit Pvt Ltd</div>
+          <div class="rg-job-title">Chief Executive Officer</div>
+          <div class="rg-job-company">Compile and Commit Pvt Ltd</div>
         </div>
-        <span class="rg-job-period">2025 · Present</span>
+        <span class="rg-job-period">Oct 2025 – Present</span>
       </div>
       <div class="rg-expand-hint">▾ tap to expand</div>
       <div class="rg-job-body">
         <ul>
-          <li>Building data and digital marketing solutions for startups and businesses</li>
-          <li>Leading a team delivering SEO, analytics, and marketing strategy</li>
-          <li>Developing automation tools and frameworks for marketing and data workflows</li>
-          <li>Managed end-to-end campaigns delivering 3x average organic traffic growth</li>
+          <li>Founded and incorporated a private limited technology company in Nepal, managing all legal registration and compliance</li>
+          <li>Built and managed a team — overseeing hiring, task delegation, and day-to-day operations across service verticals</li>
+          <li>Led end-to-end delivery of client software and web development projects including requirements gathering and QA</li>
+          <li>Designed and deployed AI automation solutions to improve client operational productivity</li>
+          <li>Delivered digital marketing services: SEO strategy, content planning, and multi-channel campaign execution</li>
+          <li>Managed all business development: client acquisition, proposals, pricing, and contract negotiation</li>
         </ul>
         <div class="rg-job-tools">
-          <span class="rg-tool-tag">Python</span><span class="rg-tool-tag">SQL</span>
-          <span class="rg-tool-tag">GA4</span><span class="rg-tool-tag">Power BI</span>
-          <span class="rg-tool-tag">Ahrefs</span><span class="rg-tool-tag">Semrush</span>
-          <span class="rg-tool-tag">Google Ads</span><span class="rg-tool-tag">Meta Ads</span>
+          <span class="rg-tool-tag">SEO</span><span class="rg-tool-tag">AI Automation</span>
+          <span class="rg-tool-tag">Google Ads</span><span class="rg-tool-tag">Project Management</span>
+          <span class="rg-tool-tag">Business Development</span>
         </div>
       </div>
     </div>
@@ -229,23 +215,34 @@ order: 1
     <div class="rg-job" onclick="rgToggle(this)">
       <div class="rg-job-header">
         <div>
-          <div class="rg-job-title">Data Analyst</div>
-          <div class="rg-job-company">Multiple Clients</div>
+          <div class="rg-job-title">Marketing Specialist & Digital Marketing Analyst</div>
+          <div class="rg-job-company">Megatech Group Pvt. Ltd.</div>
         </div>
-        <span class="rg-job-period">2020 · 2022</span>
+        <span class="rg-job-period">Jul 2025 – Ongoing</span>
       </div>
       <div class="rg-expand-hint">▾ tap to expand</div>
       <div class="rg-job-body">
         <ul>
-          <li>Designed and built data pipelines and BI dashboards for business intelligence</li>
-          <li>Conducted market research and competitive analysis using data tools</li>
-          <li>Built automated reporting systems reducing manual reporting time by 60%</li>
-          <li>Delivered actionable insights from complex datasets for decision-making</li>
+          <li>Led integrated digital marketing strategies across Google, social media, and e-commerce platforms</li>
+          <li>Analyzed Google Analytics, Google Business Profile, and SEO reports for data-driven decision-making</li>
+          <li>Managed and maintained company websites — updated content, optimized visuals, improved engagement</li>
+          <li>Oversaw Daraz Seller Center: listing optimization, pricing, order management, and promotional campaigns</li>
+          <li>Designed content strategies for Facebook, Instagram, LinkedIn, and TikTok for higher engagement</li>
+          <li>Performed graphic design using AI Illustrator, Photoshop, and Canva for promotional creatives</li>
+          <li>Played a key role in planning national events: NAIMA Nepal Automobility and NADA Auto Show 2025</li>
         </ul>
+        <div class="rg-job-achieve">
+          <div class="rg-job-achieve-title">🏆 Key Achievements</div>
+          <ul>
+            <li>Increased website traffic by <strong>35%</strong> within 6 months through SEO and content strategy</li>
+            <li>Boosted Google Business Profile reach by <strong>20%</strong>, enhancing brand visibility</li>
+            <li>Improved Daraz sales by <strong>15%</strong> via data-driven listing optimization</li>
+          </ul>
+        </div>
         <div class="rg-job-tools">
-          <span class="rg-tool-tag">Python</span><span class="rg-tool-tag">SQL</span>
-          <span class="rg-tool-tag">Excel</span><span class="rg-tool-tag">Google Analytics</span>
-          <span class="rg-tool-tag">Power BI</span><span class="rg-tool-tag">Looker Studio</span>
+          <span class="rg-tool-tag">Google Analytics</span><span class="rg-tool-tag">SEO</span>
+          <span class="rg-tool-tag">Daraz Seller Center</span><span class="rg-tool-tag">Canva</span>
+          <span class="rg-tool-tag">Facebook Ads</span><span class="rg-tool-tag">Photoshop</span>
         </div>
       </div>
     </div>
@@ -253,23 +250,49 @@ order: 1
     <div class="rg-job" onclick="rgToggle(this)">
       <div class="rg-job-header">
         <div>
-          <div class="rg-job-title">SEO & Digital Marketing Specialist</div>
-          <div class="rg-job-company">Freelance</div>
+          <div class="rg-job-title">Digital Marketing Analyst</div>
+          <div class="rg-job-company">MAX International</div>
         </div>
-        <span class="rg-job-period">2019 · 2021</span>
+        <span class="rg-job-period">Oct 2023 – Jun 2025</span>
       </div>
       <div class="rg-expand-hint">▾ tap to expand</div>
       <div class="rg-job-body">
         <ul>
-          <li>Executed SEO strategies driving consistent organic traffic growth for clients</li>
-          <li>Managed paid and organic campaigns across Google, Meta, and LinkedIn</li>
-          <li>Conducted technical SEO audits, keyword research, and content strategy planning</li>
-          <li>Achieved top 3 rankings for competitive industry keywords</li>
+          <li>Managed and optimized digital marketing campaigns across multiple platforms</li>
+          <li>Monitored key metrics using Google Analytics and performance dashboards to evaluate ROI</li>
+          <li>Conducted market and competitor research to identify emerging trends and support strategy</li>
+          <li>Enhanced website performance and UX through continuous testing, content updates, and SEO</li>
+          <li>Managed e-commerce product listings — descriptions, visuals, pricing, and visibility optimization</li>
+          <li>Analyzed sales and customer behavior data to develop actionable insights for better targeting</li>
+          <li>Prepared weekly and monthly performance reports with campaign results and growth recommendations</li>
         </ul>
         <div class="rg-job-tools">
-          <span class="rg-tool-tag">Ahrefs</span><span class="rg-tool-tag">Semrush</span>
-          <span class="rg-tool-tag">GSC</span><span class="rg-tool-tag">GA4</span>
-          <span class="rg-tool-tag">Google Ads</span><span class="rg-tool-tag">Meta Ads</span>
+          <span class="rg-tool-tag">Google Analytics</span><span class="rg-tool-tag">SEO</span>
+          <span class="rg-tool-tag">E-commerce</span><span class="rg-tool-tag">Excel</span>
+          <span class="rg-tool-tag">Market Research</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="rg-job" onclick="rgToggle(this)">
+      <div class="rg-job-header">
+        <div>
+          <div class="rg-job-title">Audit Intern</div>
+          <div class="rg-job-company">Tapasya Business Management</div>
+        </div>
+        <span class="rg-job-period">Dec 2022 – Jun 2023</span>
+      </div>
+      <div class="rg-expand-hint">▾ tap to expand</div>
+      <div class="rg-job-body">
+        <ul>
+          <li>Assisted in conducting financial audits for 15+ clients, ensuring 100% compliance with regulations</li>
+          <li>Analyzed and reconciled financial statements, reducing reporting errors by ~15%</li>
+          <li>Supported preparation of tax documentation for 8+ small businesses with 90%+ on-time filing rate</li>
+          <li>Collaborated with senior auditors on 3 major audit projects, improving delivery timelines by ~15%</li>
+        </ul>
+        <div class="rg-job-tools">
+          <span class="rg-tool-tag">Financial Auditing</span><span class="rg-tool-tag">Excel</span>
+          <span class="rg-tool-tag">Tax Documentation</span><span class="rg-tool-tag">Financial Modeling</span>
         </div>
       </div>
     </div>
@@ -277,82 +300,69 @@ order: 1
   </div>
 </div>
 
-<!-- ═══════════════ SKILLS ═══════════════ -->
+<!-- SKILLS -->
 <div class="rg-section rg-reveal">
   <div class="rg-section-title">🧠 Skills</div>
-
   <div class="rg-skill-tabs">
     <button class="rg-tab-btn active" onclick="rgTab(this,'data')">Data & Analytics</button>
     <button class="rg-tab-btn" onclick="rgTab(this,'seo')">SEO & Marketing</button>
-    <button class="rg-tab-btn" onclick="rgTab(this,'paid')">Paid Media</button>
-    <button class="rg-tab-btn" onclick="rgTab(this,'dev')">Dev & Tools</button>
+    <button class="rg-tab-btn" onclick="rgTab(this,'soft')">Soft Skills</button>
   </div>
 
   <div class="rg-skill-panel active" id="rg-panel-data">
-    <div class="rg-skill-bar-wrap"><div class="rg-skill-label"><span>Excel / Google Sheets</span><span class="rg-skill-pct">95%</span></div><div class="rg-skill-track"><div class="rg-skill-fill" data-pct="95"></div></div></div>
-    <div class="rg-skill-bar-wrap"><div class="rg-skill-label"><span>Google Analytics 4</span><span class="rg-skill-pct">90%</span></div><div class="rg-skill-track"><div class="rg-skill-fill" data-pct="90"></div></div></div>
-    <div class="rg-skill-bar-wrap"><div class="rg-skill-label"><span>Power BI / Looker Studio</span><span class="rg-skill-pct">82%</span></div><div class="rg-skill-track"><div class="rg-skill-fill" data-pct="82"></div></div></div>
-    <div class="rg-skill-bar-wrap"><div class="rg-skill-label"><span>Python (Pandas, NumPy)</span><span class="rg-skill-pct">80%</span></div><div class="rg-skill-track"><div class="rg-skill-fill" data-pct="80"></div></div></div>
-    <div class="rg-skill-bar-wrap"><div class="rg-skill-label"><span>SQL</span><span class="rg-skill-pct">75%</span></div><div class="rg-skill-track"><div class="rg-skill-fill" data-pct="75"></div></div></div>
+    <div class="rg-skill-bar-wrap"><div class="rg-skill-label"><span>Microsoft Excel</span><span class="rg-skill-pct">95%</span></div><div class="rg-skill-track"><div class="rg-skill-fill" data-pct="95"></div></div></div>
+    <div class="rg-skill-bar-wrap"><div class="rg-skill-label"><span>Google Analytics 4</span><span class="rg-skill-pct">92%</span></div><div class="rg-skill-track"><div class="rg-skill-fill" data-pct="92"></div></div></div>
+    <div class="rg-skill-bar-wrap"><div class="rg-skill-label"><span>Data Analysis & Reporting</span><span class="rg-skill-pct">88%</span></div><div class="rg-skill-track"><div class="rg-skill-fill" data-pct="88"></div></div></div>
+    <div class="rg-skill-bar-wrap"><div class="rg-skill-label"><span>Market Research</span><span class="rg-skill-pct">85%</span></div><div class="rg-skill-track"><div class="rg-skill-fill" data-pct="85"></div></div></div>
+    <div class="rg-skill-bar-wrap"><div class="rg-skill-label"><span>Financial Modeling & Budgeting</span><span class="rg-skill-pct">78%</span></div><div class="rg-skill-track"><div class="rg-skill-fill" data-pct="78"></div></div></div>
     <div class="rg-skill-tags">
-      <span class="rg-tag data">Python</span><span class="rg-tag data">SQL</span><span class="rg-tag data">Excel</span>
-      <span class="rg-tag data">GA4</span><span class="rg-tag data">Power BI</span><span class="rg-tag data">Looker Studio</span>
-      <span class="rg-tag data">Pandas</span><span class="rg-tag data">NumPy</span>
+      <span class="rg-tag data">Excel</span><span class="rg-tag data">Google Analytics</span>
+      <span class="rg-tag data">Data Analysis</span><span class="rg-tag data">Market Research</span>
+      <span class="rg-tag data">Financial Modeling</span>
     </div>
   </div>
 
   <div class="rg-skill-panel" id="rg-panel-seo">
-    <div class="rg-skill-bar-wrap"><div class="rg-skill-label"><span>Google Search Console</span><span class="rg-skill-pct">93%</span></div><div class="rg-skill-track"><div class="rg-skill-fill" data-pct="93"></div></div></div>
-    <div class="rg-skill-bar-wrap"><div class="rg-skill-label"><span>Technical SEO Audits</span><span class="rg-skill-pct">90%</span></div><div class="rg-skill-track"><div class="rg-skill-fill" data-pct="90"></div></div></div>
-    <div class="rg-skill-bar-wrap"><div class="rg-skill-label"><span>Keyword Research</span><span class="rg-skill-pct">88%</span></div><div class="rg-skill-track"><div class="rg-skill-fill" data-pct="88"></div></div></div>
-    <div class="rg-skill-bar-wrap"><div class="rg-skill-label"><span>Content Strategy</span><span class="rg-skill-pct">85%</span></div><div class="rg-skill-track"><div class="rg-skill-fill" data-pct="85"></div></div></div>
-    <div class="rg-skill-bar-wrap"><div class="rg-skill-label"><span>Link Building</span><span class="rg-skill-pct">75%</span></div><div class="rg-skill-track"><div class="rg-skill-fill" data-pct="75"></div></div></div>
+    <div class="rg-skill-bar-wrap"><div class="rg-skill-label"><span>Technical SEO</span><span class="rg-skill-pct">90%</span></div><div class="rg-skill-track"><div class="rg-skill-fill" data-pct="90"></div></div></div>
+    <div class="rg-skill-bar-wrap"><div class="rg-skill-label"><span>Content Marketing</span><span class="rg-skill-pct">88%</span></div><div class="rg-skill-track"><div class="rg-skill-fill" data-pct="88"></div></div></div>
+    <div class="rg-skill-bar-wrap"><div class="rg-skill-label"><span>Google Business Profile</span><span class="rg-skill-pct">88%</span></div><div class="rg-skill-track"><div class="rg-skill-fill" data-pct="88"></div></div></div>
+    <div class="rg-skill-bar-wrap"><div class="rg-skill-label"><span>Social Media Management</span><span class="rg-skill-pct">85%</span></div><div class="rg-skill-track"><div class="rg-skill-fill" data-pct="85"></div></div></div>
+    <div class="rg-skill-bar-wrap"><div class="rg-skill-label"><span>E-commerce (Daraz)</span><span class="rg-skill-pct">82%</span></div><div class="rg-skill-track"><div class="rg-skill-fill" data-pct="82"></div></div></div>
     <div class="rg-skill-tags">
-      <span class="rg-tag seo">Technical SEO</span><span class="rg-tag seo">Keyword Research</span>
-      <span class="rg-tag seo">Content Strategy</span><span class="rg-tag seo">Link Building</span>
-      <span class="rg-tag seo">Ahrefs</span><span class="rg-tag seo">Semrush</span><span class="rg-tag seo">GSC</span>
+      <span class="rg-tag seo">Technical SEO</span><span class="rg-tag seo">Semrush</span>
+      <span class="rg-tag seo">Content Marketing</span><span class="rg-tag seo">Google Ads</span>
+      <span class="rg-tag seo">Social Media</span><span class="rg-tag seo">GBP</span>
     </div>
   </div>
 
-  <div class="rg-skill-panel" id="rg-panel-paid">
-    <div class="rg-skill-bar-wrap"><div class="rg-skill-label"><span>Google Ads</span><span class="rg-skill-pct">80%</span></div><div class="rg-skill-track"><div class="rg-skill-fill" data-pct="80"></div></div></div>
-    <div class="rg-skill-bar-wrap"><div class="rg-skill-label"><span>Meta Ads (Facebook/Instagram)</span><span class="rg-skill-pct">78%</span></div><div class="rg-skill-track"><div class="rg-skill-fill" data-pct="78"></div></div></div>
-    <div class="rg-skill-bar-wrap"><div class="rg-skill-label"><span>Email Marketing</span><span class="rg-skill-pct">82%</span></div><div class="rg-skill-track"><div class="rg-skill-fill" data-pct="82"></div></div></div>
-    <div class="rg-skill-bar-wrap"><div class="rg-skill-label"><span>LinkedIn Ads</span><span class="rg-skill-pct">70%</span></div><div class="rg-skill-track"><div class="rg-skill-fill" data-pct="70"></div></div></div>
+  <div class="rg-skill-panel" id="rg-panel-soft">
+    <div class="rg-skill-bar-wrap"><div class="rg-skill-label"><span>Leadership & Team Management</span><span class="rg-skill-pct">90%</span></div><div class="rg-skill-track"><div class="rg-skill-fill" data-pct="90"></div></div></div>
+    <div class="rg-skill-bar-wrap"><div class="rg-skill-label"><span>Problem Solving</span><span class="rg-skill-pct">92%</span></div><div class="rg-skill-track"><div class="rg-skill-fill" data-pct="92"></div></div></div>
+    <div class="rg-skill-bar-wrap"><div class="rg-skill-label"><span>Project Management</span><span class="rg-skill-pct">88%</span></div><div class="rg-skill-track"><div class="rg-skill-fill" data-pct="88"></div></div></div>
+    <div class="rg-skill-bar-wrap"><div class="rg-skill-label"><span>Cross-cultural Communication</span><span class="rg-skill-pct">85%</span></div><div class="rg-skill-track"><div class="rg-skill-fill" data-pct="85"></div></div></div>
+    <div class="rg-skill-bar-wrap"><div class="rg-skill-label"><span>Customer Relationship Management</span><span class="rg-skill-pct">85%</span></div><div class="rg-skill-track"><div class="rg-skill-fill" data-pct="85"></div></div></div>
     <div class="rg-skill-tags">
-      <span class="rg-tag paid">Google Ads</span><span class="rg-tag paid">Meta Ads</span>
-      <span class="rg-tag paid">LinkedIn Ads</span><span class="rg-tag paid">Email Marketing</span>
-      <span class="rg-tag paid">Marketing Automation</span>
-    </div>
-  </div>
-
-  <div class="rg-skill-panel" id="rg-panel-dev">
-    <div class="rg-skill-bar-wrap"><div class="rg-skill-label"><span>Git / GitHub</span><span class="rg-skill-pct">82%</span></div><div class="rg-skill-track"><div class="rg-skill-fill" data-pct="82"></div></div></div>
-    <div class="rg-skill-bar-wrap"><div class="rg-skill-label"><span>HTML / CSS</span><span class="rg-skill-pct">78%</span></div><div class="rg-skill-track"><div class="rg-skill-fill" data-pct="78"></div></div></div>
-    <div class="rg-skill-bar-wrap"><div class="rg-skill-label"><span>REST APIs</span><span class="rg-skill-pct">72%</span></div><div class="rg-skill-track"><div class="rg-skill-fill" data-pct="72"></div></div></div>
-    <div class="rg-skill-bar-wrap"><div class="rg-skill-label"><span>Jekyll / Static Sites</span><span class="rg-skill-pct">70%</span></div><div class="rg-skill-track"><div class="rg-skill-fill" data-pct="70"></div></div></div>
-    <div class="rg-skill-tags">
-      <span class="rg-tag dev">Git</span><span class="rg-tag dev">GitHub</span>
-      <span class="rg-tag dev">HTML/CSS</span><span class="rg-tag dev">Jekyll</span>
-      <span class="rg-tag dev">REST APIs</span><span class="rg-tag dev">Docker</span>
+      <span class="rg-tag soft">Leadership</span><span class="rg-tag soft">Problem Solving</span>
+      <span class="rg-tag soft">Time Management</span><span class="rg-tag soft">CRM</span>
+      <span class="rg-tag soft">Cross-cultural Comms</span>
     </div>
   </div>
 </div>
 
-<!-- ═══════════════ PROJECTS ═══════════════ -->
+<!-- PROJECTS -->
 <div class="rg-section rg-reveal">
   <div class="rg-section-title">🚀 Projects</div>
   <div class="rg-projects">
     <div class="rg-project-card">
       <div class="rg-project-top">
         <span class="rg-project-status">🟢 Live</span>
-        <div class="rg-project-name">Compile & Commit</div>
-        <div class="rg-project-desc">Full-service Data Analytics, AI Automation,  and digital marketing agency helping startups and businesses scale through data, SEO, and marketing strategy.</div>
+        <div class="rg-project-name">Compile & Commit Pvt Ltd</div>
+        <div class="rg-project-desc">Technology company offering AI automation, web development, digital marketing, and IT consulting. Founded and incorporated in Nepal with full business infrastructure.</div>
       </div>
       <div class="rg-project-bottom">
         <div class="rg-project-tags">
-          <span class="rg-ptag">SEO</span><span class="rg-ptag">Analytics</span>
-          <span class="rg-ptag">Marketing</span>
+          <span class="rg-ptag">AI Automation</span><span class="rg-ptag">Web Dev</span>
+          <span class="rg-ptag">SEO</span><span class="rg-ptag">IT Consulting</span>
         </div>
         <a href="https://compileandcommit.com" target="_blank" class="rg-project-link">Visit ↗</a>
       </div>
@@ -360,72 +370,85 @@ order: 1
     <div class="rg-project-card">
       <div class="rg-project-top">
         <span class="rg-project-status">🟢 Live</span>
-        <div class="rg-project-name">This Blog</div>
-        <div class="rg-project-desc">Personal blog covering data analytics, SEO strategies, digital marketing tactics, and founder insights — built with Jekyll on GitHub Pages.</div>
+        <div class="rg-project-name">NEPSE Microfinance Analysis</div>
+        <div class="rg-project-desc">Sector analysis of microfinance companies listed on Nepal Stock Exchange (NEPSE) — researching financial performance, growth trends, and investment insights.</div>
       </div>
       <div class="rg-project-bottom">
         <div class="rg-project-tags">
-          <span class="rg-ptag">Jekyll</span><span class="rg-ptag">SEO</span>
-          <span class="rg-ptag">GitHub Pages</span>
+          <span class="rg-ptag">Data Analysis</span><span class="rg-ptag">Finance</span>
+          <span class="rg-ptag">NEPSE</span><span class="rg-ptag">Excel</span>
         </div>
-        <a href="https://mrparanoid23.github.io" target="_blank" class="rg-project-link">Visit ↗</a>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ═══════════════ EDUCATION ═══════════════ -->
+<!-- EDUCATION -->
 <div class="rg-section rg-reveal">
   <div class="rg-section-title">🎓 Education</div>
   <div class="rg-edu-card">
     <div class="rg-edu-icon">🎓</div>
     <div>
-      <div class="rg-edu-deg">Bachelor oF Business Administration</div>
-      <div class="rg-edu-uni">Pokhara University</div>
-      <div class="rg-edu-year">2018-2023</div>
+      <div class="rg-edu-deg">Bachelor of Business Administration (BBA)</div>
+      <div class="rg-edu-uni">Apollo International College</div>
+      <div class="rg-edu-year">Sep 2019 – Aug 2023</div>
+      <div class="rg-edu-note">🏆 Dean's List Award — GPA 3.80</div>
+      <div style="font-size:.78rem;color:var(--text-muted-color,#888);margin-top:4px;">Courses: Financial Accounting, Business Statistics, Data Analysis & Modeling, Financial Management, Strategic Management</div>
+    </div>
+  </div>
+  <div class="rg-edu-card">
+    <div class="rg-edu-icon">📚</div>
+    <div>
+      <div class="rg-edu-deg">Physical Science (Higher Secondary)</div>
+      <div class="rg-edu-uni">Tilottama Secondary School</div>
+      <div class="rg-edu-year">Jul 2016 – Jun 2018 · CGPA 3.37</div>
+    </div>
+  </div>
+  <div class="rg-edu-card">
+    <div class="rg-edu-icon">🏫</div>
+    <div>
+      <div class="rg-edu-deg">School Leaving Certificate (SLC)</div>
+      <div class="rg-edu-uni">Gaurishankar English Boarding School</div>
+      <div class="rg-edu-year">Apr 2008 – Mar 2016 · CGPA 3.55</div>
     </div>
   </div>
 </div>
 
-<!-- ═══════════════ CERTIFICATIONS ═══════════════ -->
+<!-- CERTIFICATIONS -->
 <div class="rg-section rg-reveal">
   <div class="rg-section-title">🏆 Certifications</div>
   <div class="rg-certs">
-    <div class="rg-cert"><div class="rg-cert-icon">📊</div><div><div class="rg-cert-name">Google Analytics Certification</div><div class="rg-cert-org">Google</div></div></div>
-    <div class="rg-cert"><div class="rg-cert-icon">🔍</div><div><div class="rg-cert-name">SEO Fundamentals</div><div class="rg-cert-org">Semrush Academy</div></div></div>
-    <div class="rg-cert"><div class="rg-cert-icon">📈</div><div><div class="rg-cert-name">Google Ads Search</div><div class="rg-cert-org">Google</div></div></div>
-    <div class="rg-cert"><div class="rg-cert-icon">🐍</div><div><div class="rg-cert-name">Python for Data Science</div><div class="rg-cert-org">Coursera</div></div></div>
+    <div class="rg-cert"><div class="rg-cert-icon">🤖</div><div><div class="rg-cert-name">AI Fluency for Students</div><div class="rg-cert-org">April 2026</div></div></div>
+    <div class="rg-cert"><div class="rg-cert-icon">🧠</div><div><div class="rg-cert-name">AI Fluency Framework & Foundations</div><div class="rg-cert-org">April 2026</div></div></div>
+    <div class="rg-cert"><div class="rg-cert-icon">🔍</div><div><div class="rg-cert-name">Technical SEO & AI Essentials</div><div class="rg-cert-org">Semrush · November 2025</div></div></div>
+    <div class="rg-cert"><div class="rg-cert-icon">📈</div><div><div class="rg-cert-name">SEO Foundations</div><div class="rg-cert-org">December 2025</div></div></div>
+    <div class="rg-cert"><div class="rg-cert-icon">📝</div><div><div class="rg-cert-name">Advanced Content Marketing</div><div class="rg-cert-org">Semrush · May 2024</div></div></div>
   </div>
 </div>
 
-<!-- ═══════════════ CURRENT FOCUS ═══════════════ -->
+<!-- CURRENT FOCUS -->
 <div class="rg-section rg-reveal">
   <div class="rg-section-title">🎯 Current Focus</div>
   <div class="rg-focus-grid">
     <div class="rg-focus-card">
-      <span class="rg-focus-icon">📊</span>
-      <div class="rg-focus-title">Data-Driven Marketing</div>
-      <div class="rg-focus-desc">Connecting marketing performance to revenue attribution — from traffic analysis to business impact.</div>
+      <span class="rg-focus-icon">🤖</span>
+      <div class="rg-focus-title">AI-Powered Marketing</div>
+      <div class="rg-focus-desc">Deploying AI automation tools for clients — integrating intelligent systems into marketing and business workflows.</div>
     </div>
     <div class="rg-focus-card">
       <span class="rg-focus-icon">🔍</span>
       <div class="rg-focus-title">SEO at Scale</div>
-      <div class="rg-focus-desc">Building SEO frameworks and automation tools that make organic growth predictable and measurable.</div>
+      <div class="rg-focus-desc">Building SEO strategies backed by data — from technical audits to content frameworks that drive measurable organic growth.</div>
     </div>
     <div class="rg-focus-card">
       <span class="rg-focus-icon">🚀</span>
-      <div class="rg-focus-title">GEO (Generative Engine Optimization)</div>
-      <div class="rg-focus-desc">Ranking on the GEO for better outcome and user interaction.</div>
-      </div>
-    <div class="rg-focus-card">
-      <span class="rg-focus-icon">🚀</span>
       <div class="rg-focus-title">Growing Compile & Commit</div>
-      <div class="rg-focus-desc">Scaling the agency and building products that help businesses make smarter decisions with data.</div>
+      <div class="rg-focus-desc">Scaling the agency across AI automation, web development, digital marketing, and IT consulting in Nepal and beyond.</div>
     </div>
   </div>
 </div>
 
-<!-- ═══════════════ CONNECT ═══════════════ -->
+<!-- CONNECT -->
 <div class="rg-connect rg-reveal">
   <h2>Let's Connect</h2>
   <p>I write about data analytics, SEO, and digital marketing — practical stuff, no fluff.<br>If you're building something or want to collaborate, let's talk.</p>
@@ -437,8 +460,7 @@ order: 1
 
 <script>
 (function(){
-  /* ── Typewriter ── */
-  var roles=["Data Analyst","SEO Specialist","Digital Marketer","Founder @ Compile & Commit"];
+  var roles=["Digital Marketing Specialist","SEO Analyst","CEO @ Compile & Commit","Data-Driven Marketer","BBA · Dean's List 🏆"];
   var el=document.getElementById('rg-typed');
   var ri=0,ci=0,deleting=false;
   function type(){
@@ -450,85 +472,54 @@ order: 1
       el.textContent=word.slice(0,--ci);
       if(ci===0){deleting=false;ri=(ri+1)%roles.length;}
     }
-    setTimeout(type,deleting?60:90);
+    setTimeout(type,deleting?55:85);
   }
-  setTimeout(type,600);
+  setTimeout(type,500);
 
-  /* ── Reveal on scroll ── */
-  var reveals=document.querySelectorAll('.rg-reveal');
-  var io=new IntersectionObserver(function(entries){
-    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');}});
-  },{threshold:0.12});
-  reveals.forEach(function(r){io.observe(r);});
+  var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.1});
+  document.querySelectorAll('.rg-reveal').forEach(function(r){io.observe(r);});
 
-  /* ── Animated counters ── */
-  var counters=document.querySelectorAll('.rg-stat-num');
-  var cio=new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){
-        var el2=e.target;
-        var target=parseInt(el2.dataset.val);
-        var suffix=el2.dataset.suffix||'';
-        var start=0,dur=1200,step=16;
-        var t=setInterval(function(){
-          start+=Math.ceil(target/(dur/step));
-          if(start>=target){start=target;clearInterval(t);}
-          el2.textContent=start+suffix;
-        },step);
+  var cio=new IntersectionObserver(function(e){
+    e.forEach(function(x){
+      if(x.isIntersecting){
+        var el2=x.target,target=parseInt(el2.dataset.val),suffix=el2.dataset.suffix||'',s=0,t=setInterval(function(){
+          s+=Math.ceil(target/60);if(s>=target){s=target;clearInterval(t);}
+          el2.textContent=s+suffix;
+        },16);
         cio.unobserve(el2);
       }
     });
   },{threshold:0.5});
-  counters.forEach(function(c){cio.observe(c);});
+  document.querySelectorAll('.rg-stat-num').forEach(function(c){cio.observe(c);});
 
-  /* ── Skill bars ── */
-  var fills=document.querySelectorAll('.rg-skill-fill');
   function animateBars(panel){
     panel.querySelectorAll('.rg-skill-fill').forEach(function(f){
-      setTimeout(function(){f.style.width=f.dataset.pct+'%';},80);
+      f.style.width='0';setTimeout(function(){f.style.width=f.dataset.pct+'%';},80);
     });
   }
-  var sio=new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){
-        var active=document.querySelector('.rg-skill-panel.active');
-        if(active)animateBars(active);
-        sio.disconnect();
+  var sio=new IntersectionObserver(function(e){
+    e.forEach(function(x){
+      if(x.isIntersecting){
+        var a=document.querySelector('.rg-skill-panel.active');if(a)animateBars(a);sio.disconnect();
       }
     });
-  },{threshold:0.3});
-  var skillSection=document.querySelector('.rg-skill-tabs');
-  if(skillSection)sio.observe(skillSection);
+  },{threshold:0.2});
+  var st=document.querySelector('.rg-skill-tabs');if(st)sio.observe(st);
 })();
 
-/* ── Tab switcher ── */
 function rgTab(btn,panel){
   document.querySelectorAll('.rg-tab-btn').forEach(function(b){b.classList.remove('active');});
   document.querySelectorAll('.rg-skill-panel').forEach(function(p){p.classList.remove('active');});
   btn.classList.add('active');
   var p=document.getElementById('rg-panel-'+panel);
-  if(p){
-    p.classList.add('active');
-    p.querySelectorAll('.rg-skill-fill').forEach(function(f){
-      f.style.width='0';
-      setTimeout(function(){f.style.width=f.dataset.pct+'%';},50);
-    });
-  }
+  if(p){p.classList.add('active');p.querySelectorAll('.rg-skill-fill').forEach(function(f){f.style.width='0';setTimeout(function(){f.style.width=f.dataset.pct+'%';},50);});}
 }
 
-/* ── Timeline toggle ── */
 function rgToggle(job){
-  var body=job.querySelector('.rg-job-body');
-  var hint=job.querySelector('.rg-expand-hint');
-  var isOpen=body.classList.contains('open');
+  var body=job.querySelector('.rg-job-body'),hint=job.querySelector('.rg-expand-hint'),isOpen=body.classList.contains('open');
   document.querySelectorAll('.rg-job-body.open').forEach(function(b){
-    b.classList.remove('open');
-    var h=b.parentElement.querySelector('.rg-expand-hint');
-    if(h)h.textContent='▾ tap to expand';
+    b.classList.remove('open');var h=b.parentElement.querySelector('.rg-expand-hint');if(h)h.textContent='▾ tap to expand';
   });
-  if(!isOpen){
-    body.classList.add('open');
-    if(hint)hint.textContent='▴ tap to collapse';
-  }
+  if(!isOpen){body.classList.add('open');if(hint)hint.textContent='▴ tap to collapse';}
 }
 </script>
